@@ -1,7 +1,9 @@
 require 'pp'
 require 'json'
+require 'time'
 require 'logger'
 require 'colorize'
+require 'time_difference'
 
 require './libs/base.rb'
 require './libs/report.rb'
@@ -17,8 +19,10 @@ namespace :tt do
 
   desc 'Create a report'
   task :report do
-    #rules = File.read('./rules/base.rb')
-    rules = File.read('./rules/security.rb')
+    rules = ""
+    Dir.glob(File.join('rules/*.rb')).each do |filename|
+      rules << File.read(filename)       
+    end
 
     reporter = TattleTrail::Report.new()
     reporter.compile(rules)

@@ -29,8 +29,8 @@ module TattleTrail
     def converge(event)
       @rules.each do |r|
         res = r.converge(event)
-        if res
 
+        if res
           if r.t_level == :high
             color = :red
           elsif r.t_level == :medium
@@ -40,8 +40,27 @@ module TattleTrail
           end
 
           @log.info('%s'.colorize(color) % [r.rule_name])
+          #pp event
+
+          username = self.get_username(event)
+          ts = self.get_ts(event)
+
+          #time_delta = Time.new.to_f - ts.to_f
+          #time_diff = TimeDifference.between(ts, Time.now.utc)
+          #pp time_diff.in_each_component
+          #pp Time.new.utc
+
+          @log.info("%s\t%s" % [username, ts])
         end
       end
+    end
+
+    def get_ts(event)
+      Time.parse(event['eventTime'])
+    end
+
+    def get_username(event)
+      event['userIdentity']['userName']
     end
 
   end
