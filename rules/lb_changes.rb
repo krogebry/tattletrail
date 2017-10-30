@@ -1,10 +1,22 @@
 
-rule 'Delete commands from the UI' do
+rule 'User changes load balancer listener' do
+  match_all
+  threat_level  :high
+  match 'eventName' do
+    equals 'ModifyListener'
+  end
+  performed 'by user' do
+    by :user
+    via :console
+  end
+end
+
+rule 'User changes load balancer attributes' do
   match_all
   threat_level  :high
 
   match 'eventName' do
-    starts_with 'Delete'
+    equals 'ModifyLoadBalancerAttributes'
   end
 
   performed 'by user' do
@@ -13,16 +25,4 @@ rule 'Delete commands from the UI' do
   end
 end
 
-rule 'User creates a new key pair' do
-  match_all
-  threat_level  :high
 
-  match 'eventName' do
-    equals 'CreateKeyPair'
-  end
-
-  performed 'by user' do
-    by :user
-    via :console
-  end
-end

@@ -20,15 +20,14 @@ module TattleTrail
         @log.debug('Via: %s' % source)
 
         if source == :cloudformation
-          @via = 'cloudformation.amazonaws.com'
+          @via = ['cloudformation.amazonaws.com']
         else
-          @via = 'console.ec2.amazonaws.com'
+          @via = ['signin.amazonaws.com', 'console.ec2.amazonaws.com']
         end
       end
 
       def converge(event)
-        #@log.debug('%s == %s' % [event['userAgent'], @via])
-        event['userAgent'] == @via 
+        @via.include? event['userAgent']
       end
     end
 

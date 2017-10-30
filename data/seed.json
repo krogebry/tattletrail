@@ -1,0 +1,31 @@
+{
+    "NextToken": "xTB4FSdhEkEFIZP36M2J7KBTAAucsOur3BpvRWRovHCPkX4AnUWjwW3TMhSuvBoNPYNadJeXfVxeEtQvuWsiBZsA+qlVoSvEFujAeejEnII=",
+    "Events": [
+        {
+            "Username": "krogebry",
+            "EventId": "017653df-34e0-41d5-b416-a114d9170715",
+            "EventName": "DeleteRouteTable",
+            "EventTime": 1503946444.0,
+            "CloudTrailEvent": "{\"eventVersion\":\"1.05\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDAJEQZEKZ2BAXZ2ONBK\",\"arn\":\"arn:aws:iam::903369196314:user/krogebry\",\"accountId\":\"903369196314\",\"accessKeyId\":\"ASIAIVCAVDCG46I2ZVTQ\",\"userName\":\"krogebry\",\"sessionContext\":{\"attributes\":{\"mfaAuthenticated\":\"true\",\"creationDate\":\"2017-08-28T17:35:09Z\"}},\"invokedBy\":\"signin.amazonaws.com\"},\"eventTime\":\"2017-08-28T18:54:04Z\",\"eventSource\":\"ec2.amazonaws.com\",\"eventName\":\"DeleteRouteTable\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"67.180.93.168\",\"userAgent\":\"signin.amazonaws.com\",\"errorCode\":\"Client.DependencyViolation\",\"errorMessage\":\"The routeTable 'rtb-2ae13d51' has dependencies and cannot be deleted.\",\"requestParameters\":{\"routeTableId\":\"rtb-2ae13d51\"},\"responseElements\":null,\"requestID\":\"94ab5654-57c4-4f02-9fb4-21a3f299bb60\",\"eventID\":\"017653df-34e0-41d5-b416-a114d9170715\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"903369196314\"}",
+            "Resources": [
+                {
+                    "ResourceType": "AWS::EC2::RouteTable",
+                    "ResourceName": "rtb-2ae13d51"
+                }
+            ]
+        },
+        {
+            "Username": "krogebry",
+            "EventId": "5417b1b6-8f3f-4a1d-aa23-eb1ef1d0fe33",
+            "EventName": "DeleteRouteTable",
+            "EventTime": 1503946435.0,
+            "CloudTrailEvent": "{\"eventVersion\":\"1.05\",\"userIdentity\":{\"type\":\"IAMUser\",\"principalId\":\"AIDAJEQZEKZ2BAXZ2ONBK\",\"arn\":\"arn:aws:iam::903369196314:user/krogebry\",\"accountId\":\"903369196314\",\"accessKeyId\":\"ASIAIVCAVDCG46I2ZVTQ\",\"userName\":\"krogebry\",\"sessionContext\":{\"attributes\":{\"mfaAuthenticated\":\"true\",\"creationDate\":\"2017-08-28T17:35:09Z\"}},\"invokedBy\":\"signin.amazonaws.com\"},\"eventTime\":\"2017-08-28T18:53:55Z\",\"eventSource\":\"ec2.amazonaws.com\",\"eventName\":\"DeleteRouteTable\",\"awsRegion\":\"us-east-1\",\"sourceIPAddress\":\"67.180.93.168\",\"userAgent\":\"signin.amazonaws.com\",\"errorCode\":\"Client.DependencyViolation\",\"errorMessage\":\"The routeTable 'rtb-48e63a33' has dependencies and cannot be deleted.\",\"requestParameters\":{\"routeTableId\":\"rtb-48e63a33\"},\"responseElements\":null,\"requestID\":\"66d081bc-0091-4905-9f71-c1cfdfb41f65\",\"eventID\":\"5417b1b6-8f3f-4a1d-aa23-eb1ef1d0fe33\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"903369196314\"}",
+            "Resources": [
+                {
+                    "ResourceType": "AWS::EC2::RouteTable",
+                    "ResourceName": "rtb-48e63a33"
+                }
+            ]
+        }
+		]
+}
